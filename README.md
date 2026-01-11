@@ -50,6 +50,8 @@ Contacts are stored in plain text files:
 saves/names.txt
 saves/emails.txt
 ```
+## Warning:
+The problem is that the files will be saved as per as the location in src/memory.c file or in the saves of the contact_manager_ema directory from which it is build if their is not change in the memory and that can be inconvinient for you.So, change location and create a file their if needed. 
 
 These files are automatically read on startup.
 ⚠️ Do not delete saves/ unless you want to reset all data.
