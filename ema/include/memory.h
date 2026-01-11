@@ -1,6 +1,6 @@
 #pragma once
 #ifndef MEMORY_H
-
+#define MEMORY_H
 extern char names_file[];
 extern char emails_file[];
 void init(char ***array, size_t* size, char file_name[]);
