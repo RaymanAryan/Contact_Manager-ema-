@@ -5,6 +5,8 @@
 #include "user.h"
 #include "emails.h"
 #include "names.h"
+#define EMAIL_LIMIT 256
+#define INCR_SIZE 16
 
 int user_counter(char **array) {
   size_t user_count=0;
@@ -17,7 +19,7 @@ int user_counter(char **array) {
 
 void add_user(char name[],char ***names,char email[],char ***emails,size_t* size) {
   if(user_counter(*emails) <= *size) {
-    *size += 16;
+    *size += INCR_SIZE;
     *names = realloc(*names,*size);
     *emails = realloc(*emails,*size);
   }
@@ -61,7 +63,7 @@ void update_array(const char array[],const int i, char***arrays) {
 }
 
 void update_user(char ***names,char ***emails,int i) {
-  char choice[256];
+  char choice[EMAIL_LIMIT];
   printf("Enter new Name or for old name (O) : ");
   
   //name

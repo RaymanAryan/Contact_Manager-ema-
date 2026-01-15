@@ -3,6 +3,9 @@
 #include "user.h"
 #include "manager.h"
 #include "memory.h"
+#define NAME_LIMIT 20
+#define EMAIL_LIMIT 256
+
 
 //manager cli
 void manager(char*** names , char *** emails,size_t* size) {
@@ -14,8 +17,8 @@ void manager(char*** names , char *** emails,size_t* size) {
       case 'A':all_users(*names,*emails);
                 break;
       case 'C': {
-      char name[20];
-      char email[256];
+      char name[NAME_LIMIT];
+      char email[EMAIL_LIMIT];
       printf("\nEnter the name of the subjec: ");
       scanf(" %s",name);
       printf("\nEnter the email of the subject : ");

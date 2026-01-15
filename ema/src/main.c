@@ -13,7 +13,7 @@ void app(char*** names , char *** emails,size_t * size) {
     
    scanf(" %1c", &choice);
    switch(choice) {
-       case 'C' :
+       case 'C'  :
        printf("\nWelcome! We do not connect people, we connect hearts.");
        all_users(*names, *emails);
        contactor(*names,*emails);

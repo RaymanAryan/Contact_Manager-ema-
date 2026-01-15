@@ -26,7 +26,7 @@ void open_email(const char *email) {
 void contactor(char** names, char** emails) {
     char choice;
     printf("(A) to see all users , (C) to contact , (B) to go back : ");
-    scanf(" %c", &choice);
+    scanf(" %1c", &choice);
     printf("\n");
     if(choice == 'A') {
       all_users(names,emails);
